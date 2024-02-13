@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-size: 3rem;
+    color: aliceblue;
+    text-align: center;
+}
+
+header{
+    background-color: blueviolet;
+    height: 20%;
+}
+
+.main-content{
+    height: 70%;
+    position: relative;
+}
+aside{
+    background-color: cornflowerblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 40%;
+}
+
+nav{
+    background-color:crimson;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 60%;
+}
+
+main{
+    background-color:coral;
+    position: absolute;
+    right: 0;
+    width: 60%;
+    height: 100%;
+}
+
+footer{
+    background-color: gray;
+    height: 10%;
+}
