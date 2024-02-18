@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid - explicit and implicit grid</title>
+    <style>
+        .container{
+            width: 60%;
+            margin: 50px auto;
+            display: grid;
+            /* explicit grid */
+            grid-template-columns: 100px 25%;
+            grid-template-rows: 50px 100px;
+            /* implicit grid */
+            grid-auto-rows: 200px;
+            grid-auto-columns: 200px;
+            grid-auto-flow:dense;
+        }
+
+        .items{
+            text-align: center;
+            background-color: rgb(128, 168, 243);
+        }
+
+        .items:nth-child(even){
+            background-color: rgb(245, 101, 129);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <div class="items">7</div>
+        <div class="items">8</div>
+        <div class="items">9</div>
+    </div>
+</body>
+</html>
