@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid - auto-fit & auto-fill</title>
+    <title>Grid - minmax()</title>
     <style>
         .container{
             width: 60%;
-            border: 3px solid;
             margin: 50px auto;
             display: grid;
-            /* perbedaan antata auto-fit dan auto-fill
-            lebih terlihat ketika kontainernya masih mempunyai ruang kosong */
-            grid-template-columns: repeat(auto-fill, 100px);
+            /* minmax(minimal width, maximal-width) 
+            cukup terlihat ketika responsive*/
+            grid-template-columns: 1fr minmax(100px, 300px) 1fr;
         }
 
         .items{
@@ -28,9 +27,9 @@
 </head>
 <body>
     <div class="container">
-        <div class="items">1</div>
+        <div class="items">ardiman</div>
         <div class="items">2</div>
-        <div class="items">3</div>
+        <div class="items">ardiman</div>
         <!-- <div class="items">4</div>
         <div class="items">5</div>
         <div class="items">6</div>
