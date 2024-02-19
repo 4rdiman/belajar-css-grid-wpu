@@ -9,8 +9,9 @@
             width: 60%;
             margin: 50px auto;
             display: grid;
-            /* udah diitungin ama grid */
-            grid-template-columns: repeat(4, 1fr) repeat(5, 2fr);
+            /* perbedaan min dan max-content
+            akan terlihat ketika kata-katanya banyak */
+            grid-template-columns: 1fr min-content 1fr;
         }
 
         .items{
@@ -30,7 +31,7 @@
         <div class="items">2</div>
         <div class="items">3</div>
         <div class="items">4</div>
-        <div class="items">5</div>
+        <div class="items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, laudantium!</div>
         <div class="items">6</div>
         <div class="items">7</div>
         <div class="items">8</div>
