@@ -16,60 +16,37 @@
             margin: 50px auto;
             text-align: center;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-areas: 
-                "header header header"
-                "sidebar sidebar sidebar"
-                "content content content"
-                "footer footer footer";
+            /* grid-template-columns: 1fr 2fr 3fr;
+            grid-template-rows: 50px 100px;
+            grid-template-areas:
+            "header header header"
+            "footer footer footer"; */
+
+            /* shorthand 
+            grid template-rows / grid-template-columns*/
+            grid-template: 'header header header' 50px 'footer footer footer' 100px / 1fr 2fr 3fr;
         }
 
         .items{
-            width: 100%;
-            padding: 100px;
-        }
-        .header{
-            grid-area: header;
             background-color: lightblue;
         }
 
-        .sidebar{
-            grid-area: sidebar;
-            background-color: bisque;
-        }
-
-        .content{
-            grid-area: content;
-            background-color: lightgreen;
-        }
-
-        .footer{
-            grid-area: footer;
-            background-color: rgb(176, 189, 202);
-        }
-
-        @media screen and (min-width:576px){
-            .container{
-            grid-template-areas: 
-                "header header header"
-                "sidebar content content"
-                "sidebar content content"
-                "footer footer footer";
-        }
+        .items:nth-child(even){
+            background-color: lightcoral;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="items header">header</div>
-        <div class="items sidebar">sidebar</div>
-        <div class="items content">content</div>
-        <div class="items footer">footer</div>
-        <!-- <div class="items">5</div>
+        <div class="items header">1</div>
+        <div class="items sidebar">2</div>
+        <div class="items content">3</div>
+        <div class="items footer">4</div>
+        <div class="items">5</div>
         <div class="items">6</div>
-        <div class="items">7</div>
+        <!-- <div class="items">7</div>
         <div class="items">8</div>
-        <div class="items">9</div>
-    </div> -->
+        <div class="items">9</div> -->
+    </div>
 </body>
 </html>
