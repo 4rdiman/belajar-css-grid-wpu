@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>grid | grid-template-area</title>
+    <title>grid | grid-gap</title>
     <style>
         *{
             padding: 0;
@@ -16,18 +16,14 @@
             margin: 50px auto;
             text-align: center;
             display: grid;
-            /* grid-template-columns: 1fr 2fr 3fr;
-            grid-template-rows: 50px 100px;
-            grid-template-areas:
-            "header header header"
-            "footer footer footer"; */
-
-            /* shorthand 
-            grid template-rows / grid-template-columns*/
-            grid-template: 'header header header' 50px 'footer footer footer' 100px / 1fr 2fr 3fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            /* column-gap: 10px;
+            row-gap: 20px; */
+            gap: 20px 10px;
         }
 
         .items{
+            padding: 50px;
             background-color: lightblue;
         }
 
@@ -44,9 +40,9 @@
         <div class="items footer">4</div>
         <div class="items">5</div>
         <div class="items">6</div>
-        <!-- <div class="items">7</div>
+        <div class="items">7</div>
         <div class="items">8</div>
-        <div class="items">9</div> -->
+        <div class="items">9</div>
     </div>
 </body>
 </html>
