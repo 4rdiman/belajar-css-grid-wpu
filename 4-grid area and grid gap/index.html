@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid | grid-template-area</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+                "header header header"
+                "sidebar sidebar sidebar"
+                "content content content"
+                "footer footer footer";
+        }
+
+        .items{
+            width: 100%;
+            padding: 100px;
+        }
+        .header{
+            grid-area: header;
+            background-color: lightblue;
+        }
+
+        .sidebar{
+            grid-area: sidebar;
+            background-color: bisque;
+        }
+
+        .content{
+            grid-area: content;
+            background-color: lightgreen;
+        }
+
+        .footer{
+            grid-area: footer;
+            background-color: rgb(176, 189, 202);
+        }
+
+        @media screen and (min-width:576px){
+            .container{
+            grid-template-areas: 
+                "header header header"
+                "sidebar content content"
+                "sidebar content content"
+                "footer footer footer";
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items header">header</div>
+        <div class="items sidebar">sidebar</div>
+        <div class="items content">content</div>
+        <div class="items footer">footer</div>
+        <!-- <div class="items">5</div>
+        <div class="items">6</div>
+        <div class="items">7</div>
+        <div class="items">8</div>
+        <div class="items">9</div>
+    </div> -->
+</body>
+</html>
